@@ -121,7 +121,6 @@
             this.hargaText.Name = "hargaText";
             this.hargaText.Size = new System.Drawing.Size(202, 22);
             this.hargaText.TabIndex = 6;
-            this.hargaText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // label5
             // 
@@ -138,7 +137,6 @@
             this.durasiText.Name = "durasiText";
             this.durasiText.Size = new System.Drawing.Size(202, 22);
             this.durasiText.TabIndex = 7;
-            this.durasiText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label6
             // 
@@ -201,7 +199,6 @@
             this.browseButton.TabIndex = 9;
             this.browseButton.Text = "Browse";
             this.browseButton.UseVisualStyleBackColor = true;
-            this.browseButton.Click += new System.EventHandler(this.browseButton_Click);
             // 
             // insertButton
             // 
@@ -211,7 +208,6 @@
             this.insertButton.TabIndex = 10;
             this.insertButton.Text = "Masukkan ke Database";
             this.insertButton.UseVisualStyleBackColor = true;
-            this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
             // 
             // TambahFilmControl
             // 
@@ -238,7 +234,6 @@
             this.Controls.Add(this.label1);
             this.Name = "TambahFilmControl";
             this.Size = new System.Drawing.Size(1045, 476);
-            this.Load += new System.EventHandler(this.TambahFilmControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gambarBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

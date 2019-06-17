@@ -20,5 +20,10 @@ namespace UserTixketID
         {
 
         }
+
+        private void Form1_Shown(object sender, EventArgs e)
+        {
+            daftar1.BringToFrontCustom(() => { daftar1.loginAction = () => login1.BringToFrontCustom(); });
+        }
     }
 }

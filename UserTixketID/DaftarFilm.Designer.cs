@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.itemFilm1 = new UserTixketID.ItemFilm();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Controls.Add(this.itemFilm1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(38, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(960, 518);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // panel1
+            // itemFilm1
             // 
-            this.panel1.Location = new System.Drawing.Point(13, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 200);
-            this.panel1.TabIndex = 0;
+            this.itemFilm1.Cover = null;
+            this.itemFilm1.Judul = null;
+            this.itemFilm1.Location = new System.Drawing.Point(13, 13);
+            this.itemFilm1.Name = "itemFilm1";
+            this.itemFilm1.Size = new System.Drawing.Size(150, 200);
+            this.itemFilm1.TabIndex = 1;
             // 
             // DaftarFilm
             // 
@@ -64,6 +66,6 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel1;
+        private ItemFilm itemFilm1;
     }
 }
