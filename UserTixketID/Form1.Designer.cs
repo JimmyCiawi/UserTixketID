@@ -35,16 +35,19 @@
             // 
             // daftar1
             // 
-            this.daftar1.Id = null;
-            this.daftar1.KataSandi = null;
+            this.daftar1.Id = "";
+            this.daftar1.KataSandi = "";
             this.daftar1.Location = new System.Drawing.Point(12, 12);
-            this.daftar1.Nama = null;
+            this.daftar1.Lokasi = "";
+            this.daftar1.Nama = "";
             this.daftar1.Name = "daftar1";
             this.daftar1.Size = new System.Drawing.Size(1048, 518);
             this.daftar1.TabIndex = 0;
             // 
             // login1
             // 
+            this.login1.Id = "";
+            this.login1.KataSandi = "";
             this.login1.Location = new System.Drawing.Point(12, 12);
             this.login1.Name = "login1";
             this.login1.Size = new System.Drawing.Size(1048, 518);
@@ -66,6 +69,7 @@
             this.Controls.Add(this.login1);
             this.Controls.Add(this.daftar1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);

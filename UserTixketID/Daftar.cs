@@ -64,13 +64,19 @@ namespace UserTixketID
             {
                 connection.Open();
                 int count = command.ExecuteNonQuery();
-                connection.Close();
                 if (count > 0) MessageBox.Show("Berhasil Terdaftar!!!");
             }
             catch (MySqlException error)
             {
-                MessageBox.Show("error: " + error.Message);
+                string pesan = "";
+                if (error.Message.ToLower().Contains("duplicate") && error.Message.ToLower().Contains("primary"))
+                    pesan = "ID sudah tersedia, gunakan ID yang lain.";
+                else
+                    pesan = "error: " + error.Message;
+                MessageBox.Show(pesan);
             }
+            if (connection.State != ConnectionState.Closed)
+            connection.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

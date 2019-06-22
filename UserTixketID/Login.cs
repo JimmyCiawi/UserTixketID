@@ -44,22 +44,35 @@ namespace UserTixketID
         {
             var command = new MySqlCommand();
             command.Connection = connection;
-            command.CommandText = "SELECT id_pengguna,kata_sandi FROM pengguna WHERE id_pengguna = @id_pengguna AND kata_sandi = @kata_sandi";
+            command.CommandText = "SELECT id_pengguna, nama_pengguna, kata_sandi FROM pengguna WHERE id_pengguna = @id_pengguna AND kata_sandi = @kata_sandi";
             command.Parameters.AddWithValue("@id_pengguna", Id);
             command.Parameters.AddWithValue("@kata_sandi", KataSandi);
-
             try
             {
                 connection.Open();
                 var reader = command.ExecuteReader();
-                if (!reader.Read()) return;
-                MessageBox.Show("reader: "+reader.ToString());
-                connection.Close();
+                if (!reader.Read())
+                {
+                    if (connection.State != ConnectionState.Closed) connection.Close();
+                    MessageBox.Show("Maaf, ID atau password Anda salah, mohon diperiksa kembali");
+                    return;
+                }
+                if (!string.IsNullOrEmpty(reader["nama_pengguna"].ToString()))
+                {
+                    if (MessageBox.Show("Anda login sebagai " + reader["nama_pengguna"].ToString(), "Anda yakin?", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    {
+                        User.ID = reader["id_pengguna"].ToString();
+                        User.nama = reader["nama_pengguna"].ToString();
+                        User.kata_kunci = reader["kata_sandi"].ToString();
+                    }
+                    else idText.Focus();
+                }
             }
             catch (MySqlException error)
             {
                 MessageBox.Show("error: " + error.Message);
             }
+            if (connection.State != ConnectionState.Closed) connection.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
