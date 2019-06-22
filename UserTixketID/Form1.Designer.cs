@@ -79,9 +79,9 @@
 
         #endregion
 
-        private Daftar daftar1;
-        private Login login1;
-        private DaftarFilm daftarFilm1;
+        public Daftar daftar1;
+        public Login login1;
+        public DaftarFilm daftarFilm1;
 
     }
 }

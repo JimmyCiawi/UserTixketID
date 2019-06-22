@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.layoutGroup = new System.Windows.Forms.FlowLayoutPanel();
             this.itemFilm1 = new UserTixketID.ItemFilm();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.layoutGroup.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // layoutGroup
             // 
-            this.flowLayoutPanel1.Controls.Add(this.itemFilm1);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(38, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(960, 518);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.layoutGroup.Controls.Add(this.itemFilm1);
+            this.layoutGroup.Location = new System.Drawing.Point(38, 0);
+            this.layoutGroup.Name = "layoutGroup";
+            this.layoutGroup.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.layoutGroup.Size = new System.Drawing.Size(960, 518);
+            this.layoutGroup.TabIndex = 0;
             // 
             // itemFilm1
             // 
@@ -55,17 +55,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.layoutGroup);
             this.Name = "DaftarFilm";
             this.Size = new System.Drawing.Size(1048, 518);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.layoutGroup.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel layoutGroup;
         private ItemFilm itemFilm1;
     }
 }

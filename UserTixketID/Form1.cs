@@ -17,11 +17,18 @@ namespace UserTixketID
     }
     public partial class Form1 : Form
     {
+        private static readonly Form1 INSTANCE = new Form1();
         public Form1()
         {
             InitializeComponent();
         }
-
+        public static Form1 Instance
+        {
+            get
+            {
+                return INSTANCE;
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 

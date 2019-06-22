@@ -34,16 +34,6 @@ namespace UserTixketID
         {
             base.BringToFront();
             if (doSomething != null) doSomething();
-            try
-            {
-                connection.Open();
-                Console.WriteLine("Connection Berhasil dibuka!!!");
-            }
-            catch (MySqlException error)
-            {
-                MessageBox.Show("Error: " + error.Message);
-            }
-            if (connection.State == ConnectionState.Open) connection.Close();
         }
 
         private void Daftar_Load(object sender, EventArgs e)

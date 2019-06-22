@@ -29,16 +29,6 @@ namespace UserTixketID
         {
             base.BringToFront();
             if (doSomething != null) doSomething();
-            try
-            {
-                connection.Open();
-                Console.WriteLine("Connection Berhasil dibuka!!!");
-            }
-            catch (MySqlException error)
-            {
-                MessageBox.Show("Error: " + error.Message);
-            }
-            if (connection.State == ConnectionState.Open) connection.Close();
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -64,6 +54,7 @@ namespace UserTixketID
                         User.ID = reader["id_pengguna"].ToString();
                         User.nama = reader["nama_pengguna"].ToString();
                         User.kata_kunci = reader["kata_sandi"].ToString();
+                        Form1.Instance.daftarFilm1.BringToFrontCustom(Form1.Instance.daftarFilm1.GenerateItemList);
                     }
                     else idText.Focus();
                 }

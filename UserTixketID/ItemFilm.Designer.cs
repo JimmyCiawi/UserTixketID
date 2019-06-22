@@ -38,8 +38,10 @@
             this.coverImage.Location = new System.Drawing.Point(0, 0);
             this.coverImage.Name = "coverImage";
             this.coverImage.Size = new System.Drawing.Size(150, 150);
+            this.coverImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.coverImage.TabIndex = 0;
             this.coverImage.TabStop = false;
+            this.coverImage.DoubleClick += new System.EventHandler(this.itemFilm_DoubleClick);
             // 
             // judulText
             // 
@@ -49,6 +51,7 @@
             this.judulText.Name = "judulText";
             this.judulText.Size = new System.Drawing.Size(150, 52);
             this.judulText.TabIndex = 1;
+            this.judulText.DoubleClick += new System.EventHandler(this.itemFilm_DoubleClick);
             // 
             // ItemFilm
             // 
