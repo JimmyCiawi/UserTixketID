@@ -39,20 +39,24 @@
             this.durasiText = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.jadwalTimePicker = new System.Windows.Forms.DateTimePicker();
             this.gambarBox = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.sinopsisText = new System.Windows.Forms.TextBox();
             this.beliButton = new System.Windows.Forms.Button();
             this.kembaliButton = new System.Windows.Forms.Button();
+            this.jadwalText = new System.Windows.Forms.TextBox();
+            this.jumlahTiket = new System.Windows.Forms.TextBox();
+            this.jumlahTiketLabel = new System.Windows.Forms.Label();
+            this.uangAndaText = new System.Windows.Forms.TextBox();
+            this.uangAndaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gambarBox)).BeginInit();
             this.SuspendLayout();
             // 
             // judulText
             // 
-            this.judulText.Enabled = false;
             this.judulText.Location = new System.Drawing.Point(616, 39);
             this.judulText.Name = "judulText";
+            this.judulText.ReadOnly = true;
             this.judulText.Size = new System.Drawing.Size(202, 22);
             this.judulText.TabIndex = 2;
             // 
@@ -67,9 +71,9 @@
             // 
             // namaBioskopText
             // 
-            this.namaBioskopText.Enabled = false;
             this.namaBioskopText.Location = new System.Drawing.Point(616, 164);
             this.namaBioskopText.Name = "namaBioskopText";
+            this.namaBioskopText.ReadOnly = true;
             this.namaBioskopText.Size = new System.Drawing.Size(202, 22);
             this.namaBioskopText.TabIndex = 4;
             // 
@@ -84,9 +88,9 @@
             // 
             // lokasiBioskopText
             // 
-            this.lokasiBioskopText.Enabled = false;
             this.lokasiBioskopText.Location = new System.Drawing.Point(616, 220);
             this.lokasiBioskopText.Name = "lokasiBioskopText";
+            this.lokasiBioskopText.ReadOnly = true;
             this.lokasiBioskopText.Size = new System.Drawing.Size(202, 22);
             this.lokasiBioskopText.TabIndex = 5;
             // 
@@ -101,10 +105,10 @@
             // 
             // hargaText
             // 
-            this.hargaText.Enabled = false;
             this.hargaText.Location = new System.Drawing.Point(616, 122);
             this.hargaText.MaxLength = 11;
             this.hargaText.Name = "hargaText";
+            this.hargaText.ReadOnly = true;
             this.hargaText.Size = new System.Drawing.Size(202, 22);
             this.hargaText.TabIndex = 6;
             // 
@@ -119,9 +123,9 @@
             // 
             // durasiText
             // 
-            this.durasiText.Enabled = false;
             this.durasiText.Location = new System.Drawing.Point(616, 84);
             this.durasiText.Name = "durasiText";
+            this.durasiText.ReadOnly = true;
             this.durasiText.Size = new System.Drawing.Size(202, 22);
             this.durasiText.TabIndex = 7;
             // 
@@ -137,20 +141,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(152, 377);
+            this.label7.Location = new System.Drawing.Point(507, 268);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Jadwal Tayang";
-            // 
-            // jadwalTimePicker
-            // 
-            this.jadwalTimePicker.Enabled = false;
-            this.jadwalTimePicker.Location = new System.Drawing.Point(263, 377);
-            this.jadwalTimePicker.Name = "jadwalTimePicker";
-            this.jadwalTimePicker.Size = new System.Drawing.Size(366, 22);
-            this.jadwalTimePicker.TabIndex = 8;
-            this.jadwalTimePicker.Value = new System.DateTime(2019, 12, 26, 0, 0, 0, 0);
             // 
             // gambarBox
             // 
@@ -165,29 +160,30 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(507, 273);
+            this.label8.Location = new System.Drawing.Point(152, 354);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 17);
+            this.label8.Size = new System.Drawing.Size(65, 17);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Sinopsis";
+            this.label8.Text = "Sinopsis:";
             // 
             // sinopsisText
             // 
-            this.sinopsisText.Enabled = false;
-            this.sinopsisText.Location = new System.Drawing.Point(616, 273);
+            this.sinopsisText.Location = new System.Drawing.Point(155, 384);
             this.sinopsisText.Multiline = true;
             this.sinopsisText.Name = "sinopsisText";
+            this.sinopsisText.ReadOnly = true;
             this.sinopsisText.Size = new System.Drawing.Size(395, 58);
             this.sinopsisText.TabIndex = 3;
             // 
             // beliButton
             // 
-            this.beliButton.Location = new System.Drawing.Point(706, 375);
+            this.beliButton.Location = new System.Drawing.Point(706, 418);
             this.beliButton.Name = "beliButton";
             this.beliButton.Size = new System.Drawing.Size(112, 24);
             this.beliButton.TabIndex = 16;
             this.beliButton.Text = "Beli";
             this.beliButton.UseVisualStyleBackColor = true;
+            this.beliButton.Click += new System.EventHandler(this.beliButton_Click);
             // 
             // kembaliButton
             // 
@@ -199,16 +195,62 @@
             this.kembaliButton.UseVisualStyleBackColor = true;
             this.kembaliButton.Click += new System.EventHandler(this.kembaliButton_Click);
             // 
+            // jadwalText
+            // 
+            this.jadwalText.Location = new System.Drawing.Point(616, 268);
+            this.jadwalText.Name = "jadwalText";
+            this.jadwalText.ReadOnly = true;
+            this.jadwalText.Size = new System.Drawing.Size(223, 22);
+            this.jadwalText.TabIndex = 18;
+            // 
+            // jumlahTiket
+            // 
+            this.jumlahTiket.Location = new System.Drawing.Point(706, 351);
+            this.jumlahTiket.Name = "jumlahTiket";
+            this.jumlahTiket.Size = new System.Drawing.Size(148, 22);
+            this.jumlahTiket.TabIndex = 20;
+            this.jumlahTiket.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.jumlahTiket_KeyPress);
+            // 
+            // jumlahTiketLabel
+            // 
+            this.jumlahTiketLabel.AutoSize = true;
+            this.jumlahTiketLabel.Location = new System.Drawing.Point(602, 351);
+            this.jumlahTiketLabel.Name = "jumlahTiketLabel";
+            this.jumlahTiketLabel.Size = new System.Drawing.Size(87, 17);
+            this.jumlahTiketLabel.TabIndex = 19;
+            this.jumlahTiketLabel.Text = "Jumlah tiket:";
+            // 
+            // uangAndaText
+            // 
+            this.uangAndaText.Location = new System.Drawing.Point(706, 384);
+            this.uangAndaText.Name = "uangAndaText";
+            this.uangAndaText.Size = new System.Drawing.Size(148, 22);
+            this.uangAndaText.TabIndex = 22;
+            this.uangAndaText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.uangAndaText_KeyPress);
+            // 
+            // uangAndaLabel
+            // 
+            this.uangAndaLabel.AutoSize = true;
+            this.uangAndaLabel.Location = new System.Drawing.Point(602, 384);
+            this.uangAndaLabel.Name = "uangAndaLabel";
+            this.uangAndaLabel.Size = new System.Drawing.Size(80, 17);
+            this.uangAndaLabel.TabIndex = 21;
+            this.uangAndaLabel.Text = "uang anda:";
+            // 
             // DetailFilm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.uangAndaText);
+            this.Controls.Add(this.uangAndaLabel);
+            this.Controls.Add(this.jumlahTiket);
+            this.Controls.Add(this.jumlahTiketLabel);
+            this.Controls.Add(this.jadwalText);
             this.Controls.Add(this.kembaliButton);
             this.Controls.Add(this.beliButton);
             this.Controls.Add(this.sinopsisText);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.gambarBox);
-            this.Controls.Add(this.jadwalTimePicker);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.durasiText);
             this.Controls.Add(this.label6);
@@ -241,11 +283,15 @@
         private System.Windows.Forms.TextBox durasiText;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker jadwalTimePicker;
         private System.Windows.Forms.PictureBox gambarBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox sinopsisText;
         private System.Windows.Forms.Button beliButton;
         private System.Windows.Forms.Button kembaliButton;
+        private System.Windows.Forms.TextBox jadwalText;
+        private System.Windows.Forms.TextBox jumlahTiket;
+        private System.Windows.Forms.Label jumlahTiketLabel;
+        private System.Windows.Forms.TextBox uangAndaText;
+        private System.Windows.Forms.Label uangAndaLabel;
     }
 }
