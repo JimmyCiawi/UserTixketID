@@ -70,5 +70,15 @@ namespace UserTixketID
         {
             daftarAction();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            kataSandiText.UseSystemPasswordChar = checkBox1.Checked;
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            kataSandiText.UseSystemPasswordChar = checkBox1.Checked;
+        }
     }
 }

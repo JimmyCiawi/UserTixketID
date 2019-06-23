@@ -38,7 +38,7 @@ namespace UserTixketID
 
         private void Daftar_Load(object sender, EventArgs e)
         {
-
+            kataSandiText.UseSystemPasswordChar = checkBox1.Checked;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -72,6 +72,11 @@ namespace UserTixketID
         private void button2_Click(object sender, EventArgs e)
         {
             loginAction();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            kataSandiText.UseSystemPasswordChar = checkBox1.Checked;
         }
     }
 }

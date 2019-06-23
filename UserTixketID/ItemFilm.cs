@@ -29,7 +29,11 @@ namespace UserTixketID
 
         private void itemFilm_DoubleClick(object sender, EventArgs e)
         {
-
+            Form1.Instance.detailFilm1.BringToFrontCustom(() =>
+            {
+                Form1.Instance.detailFilm1.idFilm = Id_film;
+                Form1.Instance.detailFilm1.MengambilTampilanData(Id_film);
+            });
         }
     }
 }

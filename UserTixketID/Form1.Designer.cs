@@ -28,10 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.daftar1 = new UserTixketID.Daftar();
-            this.login1 = new UserTixketID.Login();
             this.daftarFilm1 = new UserTixketID.DaftarFilm();
+            this.login1 = new UserTixketID.Login();
+            this.daftar1 = new UserTixketID.Daftar();
+            this.detailFilm1 = new UserTixketID.DetailFilm();
             this.SuspendLayout();
+            // 
+            // daftarFilm1
+            // 
+            this.daftarFilm1.Location = new System.Drawing.Point(12, 12);
+            this.daftarFilm1.Name = "daftarFilm1";
+            this.daftarFilm1.Size = new System.Drawing.Size(1048, 518);
+            this.daftarFilm1.TabIndex = 2;
+            // 
+            // login1
+            // 
+            this.login1.Id = "";
+            this.login1.KataSandi = "";
+            this.login1.Location = new System.Drawing.Point(12, 12);
+            this.login1.Name = "login1";
+            this.login1.Size = new System.Drawing.Size(1048, 518);
+            this.login1.TabIndex = 1;
             // 
             // daftar1
             // 
@@ -44,27 +61,19 @@
             this.daftar1.Size = new System.Drawing.Size(1048, 518);
             this.daftar1.TabIndex = 0;
             // 
-            // login1
+            // detailFilm1
             // 
-            this.login1.Id = "";
-            this.login1.KataSandi = "";
-            this.login1.Location = new System.Drawing.Point(12, 12);
-            this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(1048, 518);
-            this.login1.TabIndex = 1;
-            // 
-            // daftarFilm1
-            // 
-            this.daftarFilm1.Location = new System.Drawing.Point(12, 12);
-            this.daftarFilm1.Name = "daftarFilm1";
-            this.daftarFilm1.Size = new System.Drawing.Size(1048, 518);
-            this.daftarFilm1.TabIndex = 2;
+            this.detailFilm1.Location = new System.Drawing.Point(15, 12);
+            this.detailFilm1.Name = "detailFilm1";
+            this.detailFilm1.Size = new System.Drawing.Size(1045, 476);
+            this.detailFilm1.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 542);
+            this.Controls.Add(this.detailFilm1);
             this.Controls.Add(this.daftarFilm1);
             this.Controls.Add(this.login1);
             this.Controls.Add(this.daftar1);
@@ -82,6 +91,7 @@
         public Daftar daftar1;
         public Login login1;
         public DaftarFilm daftarFilm1;
+        public DetailFilm detailFilm1;
 
     }
 }
